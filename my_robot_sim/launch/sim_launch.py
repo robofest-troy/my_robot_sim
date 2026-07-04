@@ -81,8 +81,8 @@ def generate_launch_description():
                 'output_frame': 'camera_optical_link',
             }],
             remappings=[
-                ('depth',            '/camera/depth/image_raw'),
-                ('depth_camera_info', '/camera/depth/camera_info'),
+                ('depth',            '/depth_camera/depth/image_raw'),
+                ('depth_camera_info', '/depth_camera/depth/camera_info'),
                 ('scan',             '/scan'),
             ],
         ),
