@@ -50,10 +50,12 @@ sudo apt install -y \
   ros-humble-gazebo-ros2-control \
   ros-humble-nav2-bringup \
   ros-humble-navigation2 \
+  ros-humble-nav2-rviz-plugins \
   ros-humble-slam-toolbox \
   ros-humble-depthimage-to-laserscan \
   ros-humble-teleop-twist-keyboard \
   ros-humble-xacro \
+  ros-humble-joint-state-publisher \
   ros-humble-joint-state-publisher-gui \
   ros-humble-robot-state-publisher \
   ros-humble-tf2-tools \
