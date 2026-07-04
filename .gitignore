@@ -1,0 +1,17 @@
+# ROS2 build artifacts
+build/
+install/
+log/
+
+# Map files generated at runtime (keep .gitkeep)
+my_robot_sim/maps/*.pgm
+my_robot_sim/maps/*.yaml
+
+# Python
+__pycache__/
+*.pyc
+
+# Editor
+.vscode/
+.idea/
+*.swp

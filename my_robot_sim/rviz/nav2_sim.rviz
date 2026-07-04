@@ -1,0 +1,59 @@
+Panels:
+  - Class: rviz_common/Displays
+    Name: Displays
+  - Class: rviz_common/Views
+    Name: Views
+  - Class: nav2_rviz_plugins/Nav2Panel
+    Name: Navigation
+Global Options:
+  Background Color: 48; 48; 48
+  Fixed Frame: map
+  Frame Rate: 30
+Visualization Manager:
+  Displays:
+    - Class: rviz_default_plugins/Map
+      Name: Map
+      Enabled: true
+      Topic:
+        Value: /map
+      Color Scheme: map
+      Alpha: 0.7
+    - Class: rviz_default_plugins/LaserScan
+      Name: LaserScan
+      Enabled: true
+      Topic:
+        Value: /scan
+      Size (m): 0.04
+      Color: 255; 0; 0
+    - Class: rviz_default_plugins/PointCloud2
+      Name: DepthPointCloud
+      Enabled: true
+      Topic:
+        Value: /camera/depth/points
+      Size (m): 0.02
+      Color Transformer: AxisColor
+    - Class: rviz_default_plugins/RobotModel
+      Name: RobotModel
+      Enabled: true
+      Description Topic:
+        Value: /robot_description
+    - Class: nav2_rviz_plugins/ParticleCloud
+      Name: Particles (AMCL)
+      Enabled: true
+      Topic:
+        Value: /particle_cloud
+    - Class: rviz_default_plugins/Path
+      Name: GlobalPath
+      Enabled: true
+      Topic:
+        Value: /plan
+      Color: 0; 255; 0
+    - Class: rviz_default_plugins/Path
+      Name: LocalPath
+      Enabled: true
+      Topic:
+        Value: /local_plan
+      Color: 0; 0; 255
+    - Class: rviz_default_plugins/TF
+      Name: TF
+      Enabled: false
