@@ -474,6 +474,7 @@ slam_toolbox:
     map_update_interval: 5.0
     resolution: 0.05
     max_laser_range: 8.0
+    min_laser_range: 0.2
     minimum_travel_distance: 0.5
     minimum_travel_heading: 0.5
 ```
@@ -558,6 +559,10 @@ def generate_launch_description():
                 'use_sim_time': True,
             }],
         ),
+
+        # Publishes wheel joint states so robot_state_publisher can broadcast wheel TF                                                                                                                                                                                             Node(
+            package='joint_state_publisher',                                                                                                                                                                                                                                           executable='joint_state_publisher',                                                                                                                                                                                                                                        name='joint_state_publisher',                                                                                                                                                                                                                                              parameters=[{'use_sim_time': True}],                                                                                                                                                                                                                                   ),
+        
 
         # Spawn the robot into Gazebo
         Node(
