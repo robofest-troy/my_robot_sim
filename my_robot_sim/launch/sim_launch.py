@@ -37,6 +37,15 @@ def generate_launch_description():
             }],
         ),
 
+
+        # Publishes wheel joint states so robot_state_publisher can broadcast wheel TF                                                                                                                                                                                                                                            
+        Node(                                                                                                                                                                                                                                                                                                                     
+            package='joint_state_publisher',                                                                                                                                                                                                                                                                                      
+            executable='joint_state_publisher',                                                                                                                                                                                                                                                                                   
+            name='joint_state_publisher',                                                                                                                                                                                                                                                                                         
+            parameters=[{'use_sim_time': True}],                                                                                                                                                                                                                                                                                  
+       ),
+        
         # Spawn the robot into Gazebo (delayed slightly so Gazebo is ready)
         TimerAction(
             period=3.0,
